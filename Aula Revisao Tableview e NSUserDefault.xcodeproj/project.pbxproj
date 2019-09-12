@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		13698AFA2329A86B00C98902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698AF92329A86B00C98902 /* AppDelegate.swift */; };
-		13698AFC2329A86B00C98902 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698AFB2329A86B00C98902 /* ViewController.swift */; };
+		13698AFC2329A86B00C98902 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698AFB2329A86B00C98902 /* HomeViewController.swift */; };
 		13698AFF2329A86B00C98902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13698AFD2329A86B00C98902 /* Main.storyboard */; };
 		13698B012329A86C00C98902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13698B002329A86C00C98902 /* Assets.xcassets */; };
 		13698B042329A86C00C98902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13698B022329A86C00C98902 /* LaunchScreen.storyboard */; };
+		13698B0D2329AAE800C98902 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698B0B2329AAE800C98902 /* MyCustomTableViewCell.swift */; };
+		13698B0E2329AAE800C98902 /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13698B0C2329AAE800C98902 /* MyCustomTableViewCell.xib */; };
+		13698B122329AF4400C98902 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698B112329AF4400C98902 /* Produto.swift */; };
+		13698B162329BE9100C98902 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13698B152329BE9100C98902 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13698AF62329A86B00C98902 /* Aula Revisao Tableview e NSUserDefault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aula Revisao Tableview e NSUserDefault.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13698AF92329A86B00C98902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13698AFB2329A86B00C98902 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13698AFB2329A86B00C98902 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13698AFE2329A86B00C98902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13698B002329A86C00C98902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13698B032329A86C00C98902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13698B052329A86C00C98902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13698B0B2329AAE800C98902 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		13698B0C2329AAE800C98902 /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
+		13698B112329AF4400C98902 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
+		13698B152329BE9100C98902 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		13698AF82329A86B00C98902 /* Aula Revisao Tableview e NSUserDefault */ = {
 			isa = PBXGroup;
 			children = (
+				13698B142329BE2200C98902 /* Utils */,
+				13698B102329AF1100C98902 /* View */,
+				13698B0F2329AEE000C98902 /* Model */,
 				13698AF92329A86B00C98902 /* AppDelegate.swift */,
-				13698AFB2329A86B00C98902 /* ViewController.swift */,
-				13698AFD2329A86B00C98902 /* Main.storyboard */,
 				13698B002329A86C00C98902 /* Assets.xcassets */,
-				13698B022329A86C00C98902 /* LaunchScreen.storyboard */,
 				13698B052329A86C00C98902 /* Info.plist */,
 			);
 			path = "Aula Revisao Tableview e NSUserDefault";
+			sourceTree = "<group>";
+		};
+		13698B0F2329AEE000C98902 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13698B112329AF4400C98902 /* Produto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13698B102329AF1100C98902 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13698B132329AF5E00C98902 /* CustomCell */,
+				13698AFB2329A86B00C98902 /* HomeViewController.swift */,
+				13698AFD2329A86B00C98902 /* Main.storyboard */,
+				13698B022329A86C00C98902 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13698B132329AF5E00C98902 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				13698B0B2329AAE800C98902 /* MyCustomTableViewCell.swift */,
+				13698B0C2329AAE800C98902 /* MyCustomTableViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		13698B142329BE2200C98902 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13698B152329BE9100C98902 /* utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +168,7 @@
 			files = (
 				13698B042329A86C00C98902 /* LaunchScreen.storyboard in Resources */,
 				13698B012329A86C00C98902 /* Assets.xcassets in Resources */,
+				13698B0E2329AAE800C98902 /* MyCustomTableViewCell.xib in Resources */,
 				13698AFF2329A86B00C98902 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13698AFC2329A86B00C98902 /* ViewController.swift in Sources */,
+				13698B162329BE9100C98902 /* utils.swift in Sources */,
+				13698AFC2329A86B00C98902 /* HomeViewController.swift in Sources */,
+				13698B122329AF4400C98902 /* Produto.swift in Sources */,
 				13698AFA2329A86B00C98902 /* AppDelegate.swift in Sources */,
+				13698B0D2329AAE800C98902 /* MyCustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
