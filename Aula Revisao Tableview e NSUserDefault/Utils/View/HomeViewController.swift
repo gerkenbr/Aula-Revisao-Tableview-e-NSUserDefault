@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
     //var listaProduto: [Produto] = []
     //mudou para o singleton
     
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var myTableview: UITableView!
     
     @IBOutlet weak var novoProdutoTextfield: UITextField!
@@ -25,17 +28,29 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myTableview.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
+        self.myTableview.register(UINib(nibName: "MyCustomTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
+        
+        SessionManager.shared.abreSessao()
         
         self.myTableview.delegate = self
         self.myTableview.dataSource = self
         self.novoProdutoTextfield.delegate = self
         
+        self.titleLabel.text = Utils.getStringObject(key: "title")
         
+        
+        self.myTableview.reloadData()
         
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func clicouSalvar(_ sender: Any) {
+    
+    SessionManager.shared.encerraSessao()
+        
+    }
+    
+    
     func digitouProduto(nomeProduto: String) {
         
         if nomeProduto != "" {
@@ -71,7 +86,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UIText
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         digitouProduto(nomeProduto: textField.text ?? "")
-    
+        
+        Utils.saveStringObject(key: "title", value: textField.text ?? "")
+        self.titleLabel.text = textField.text
+        
     return true
     }
     
