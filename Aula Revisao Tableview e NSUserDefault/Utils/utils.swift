@@ -20,9 +20,9 @@ class SessionManager {
     var listaProdutos: [Produto] = []
     var arrayDicProduto: [[String:Any]] = []
     
-    func fazArrayDicProduto(dicionario: [String:Any]) {
+    func fazArrayDicProduto(dicionario: [[String:Any]]) {
         
-        self.arrayDicProduto.append(dicionario)
+        //self.arrayDicProduto.append(dicionario)
         
         Utils.saveObject(key: "arrayDicProduto", value: SessionManager.shared.arrayDicProduto)
     }
@@ -32,9 +32,10 @@ class SessionManager {
         
         for produto in SessionManager.shared.listaProdutos {
             dicAtual = produto.convertForDic()
-        self.fazArrayDicProduto(dicionario: dicAtual)
+        //self.fazArrayDicProduto(dicionario: dicAtual)
+        self.arrayDicProduto.append(dicAtual)
         }
-        
+        self.fazArrayDicProduto(dicionario: arrayDicProduto)
     }
     
     func abreSessao() {

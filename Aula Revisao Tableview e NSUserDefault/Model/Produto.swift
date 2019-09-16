@@ -27,7 +27,7 @@ class Produto {
     
     func convertForDic() -> [String:Any] {
         
-        let dic:[String: Any] = ["nome":self.nomeProduto, "qtdeProduto": self.qtdeProduto]
+        let dic:[String: Any] = ["nome":self.nomeProduto, "qtdeProduto": self.qtdeProduto ]
         
         return dic
     }
